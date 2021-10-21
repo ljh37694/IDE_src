@@ -63,13 +63,13 @@ void loop() {
   dist_ema = alpha * dist_raw + (1 - alpha) * dist_ema;
 
 // output the read value to the serial port
-  Serial.print("Min:180,Low:180,raw:");
+  Serial.print("Min:100,raw:");
   Serial.print(dist_raw);
   Serial.print(",ema:");
   Serial.print(dist_ema);
   Serial.print(",servo:");
   Serial.print(myservo.read());
-  Serial.println(",High:220,Max:360");
+  Serial.println(",Max:400");
 
 // adjust servo position according to the USS read value
 
